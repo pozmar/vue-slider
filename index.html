@@ -28,6 +28,8 @@
           <!-- deve trovare l'immagine che è all'indice stabilito -->
           <img :src="imgList[indexImg]" alt="">
           <select class="" name="" v-model="indexImg">
+            <!-- con n-1 faccio corrispondere il valore dell'indice a quello dell'immagine selezionata (a indice 0 img 1, a indice 1 img 2 ecc);
+            con il v-for genero tanti numeri quanto la lunghezza dell'array -->
             <option :value="n-1" v-for="n in imgList.length">{{ n }}</option>
 
           </select>
