@@ -18,16 +18,24 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2 d-flex justify-content-center align-items-center">
+          <!--  con il click richiamo il metodo prev -->
           <a href="#" @click="prev">
             <i class="fas fa-chevron-left"></i>
           </a>
         </div>
         <div class="col-lg-8">
+
+          <!-- deve trovare l'immagine che è all'indice stabilito -->
           <img :src="imgList[indexImg]" alt="">
-    
+          <select class="" name="" v-model="indexImg">
+            <option :value="n-1" v-for="n in imgList.length">{{ n }}</option>
+
+          </select>
+
 
         </div>
         <div class="col-lg-2 d-flex justify-content-center align-items-center">
+          <!-- con il click richiamo il metodo next -->
           <a href="#" @click="next">
             <i class="fas fa-chevron-right"></i>
           </a>
